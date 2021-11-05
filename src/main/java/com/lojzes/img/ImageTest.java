@@ -1,19 +1,14 @@
 package com.lojzes.img;
 
 import cn.hutool.core.img.ImgUtil;
-import com.sun.imageio.plugins.common.ImageUtil;
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.FileImageOutputStream;
-import javax.imageio.stream.ImageOutputStream;
-
 /**
  * 描述:
  * <p> // todo
