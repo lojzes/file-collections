@@ -88,22 +88,22 @@ public class ImageTest {
     // 字体左右 距画板的距离
     int w = 3;
     // 适应字体右边的距离
-    int plus = 5;
+    int plus = 8;
     if (nameCharSize == 4) {
-      plus = 7;
-    } else if (nameCharSize == 5) {
       plus = 10;
-    } else if (nameCharSize == 6) {
-      plus = 12;
-    } else if (nameCharSize == 7) {
+    } else if (nameCharSize == 5) {
       plus = 13;
-    } else if (nameCharSize == 8) {
+    } else if (nameCharSize == 6) {
+      plus = 15;
+    } else if (nameCharSize == 7) {
       plus = 16;
+    } else if (nameCharSize == 8) {
+      plus = 19;
     } else if (nameCharSize == 9) {
-      plus = 17;
+      plus = 20;
     }
 
-    int width = fontSize * nameCharSize + w * 2 + plus + 3;
+    int width = fontSize * nameCharSize + w * 2 + plus;
     int height = fontSize + 10;
     // 创建BufferedImage 对象
     BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
