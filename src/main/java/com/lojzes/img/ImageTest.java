@@ -22,7 +22,7 @@ public class ImageTest {
     //d1(30);
    // d2();
    // d3(30,"爱新觉罗张三丰");
-    d3(30,"张丰");
+    d3(30,"刘明树");
   }
 
   public static void d2() throws IOException {
@@ -75,7 +75,7 @@ public class ImageTest {
     }
 
     int width = fontSize * nameCharSize + w * 2;
-    int height = fontSize * 2;
+    int height = fontSize  + 20 ;
 
     // 创建BufferedImage 对象
     BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -91,7 +91,7 @@ public class ImageTest {
     // 设置字体颜色
     graphics.setColor(Color.black);
     // 写字
-    int y = fontSize + fontSize/2;
+    int y = fontSize + 15;
     graphics.drawString(name,w,y);
     // 释放对象
     graphics.dispose();
@@ -111,7 +111,7 @@ public class ImageTest {
     Graphics2D g = (Graphics2D) img.getGraphics();
     g.setColor(Color.black);
     g.fillRect(0, 0, borderedImageWidth, borderedImageHeight);
-    g.drawImage(source, borderLeft, borderTop, width + borderLeft, height + borderTop, 0, 0, width, height, Color.YELLOW, null);
+    g.drawImage(source, borderLeft, borderTop, width + borderLeft, height + borderTop, 0, 20, width, height, Color.YELLOW, null);
 
     ImageIO.write(img, "png", file);
   }
