@@ -24,7 +24,7 @@ public class ImageTest {
     //d1(30);
     // d2();
     // d3(30,"爱新觉罗张三丰");
-    d3(30, "刘明树");
+    d3(30, "李天琦");
 
 //    int fontSize = 30;
 //    int width = fontSize * 3 + 4;
