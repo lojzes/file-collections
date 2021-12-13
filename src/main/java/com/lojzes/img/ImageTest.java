@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.FileImageOutputStream;
@@ -22,7 +23,24 @@ public class ImageTest {
     //d1(30);
    // d2();
    // d3(30,"爱新觉罗张三丰");
-    d3(30,"刘明树");
+      d3(30,"刘明树爱心觉罗中国");
+
+//    int fontSize = 30;
+//    int width = fontSize * 3 + 4;
+//    int height = fontSize + 5 ;
+//
+//    BufferedImage bL = new BufferedImage(width, height,BufferedImage.TYPE_INT_RGB);
+//    Graphics2D g2 = (Graphics2D)bL.getGraphics();
+//    //设置颜色
+//    g2.setColor(Color.WHITE);
+//    g2.fillRect(0, 0, width, height);//填充整张图片
+//    g2.setColor(Color.white);//边框填色
+//    g2.fillRect(0,0,width,height);
+//    g2.setFont(new Font("宋体",Font.BOLD,fontSize));
+//    g2.setColor(Color.BLACK);//设置颜色
+//    g2.drawString("刘明树", 0, fontSize);//x,y轴
+//    ImageIO.write(bL,"JPEG",new FileOutputStream("D:/a.jpg"));//保存图片
+
   }
 
   public static void d2() throws IOException {
@@ -67,15 +85,15 @@ public class ImageTest {
     int nameCharSize = name.toCharArray().length;
     // int fontSize = 25;
     // 字体左右 距 画板的距离
-    int w = 10;
+    int w = 3;
     if(nameCharSize == 2){
       char[] chars = name.toCharArray();
       name = chars[0] + " " + chars[1];
       nameCharSize = 3;
     }
 
-    int width = fontSize * nameCharSize + w * 2;
-    int height = fontSize  + 20 ;
+    int width = fontSize * nameCharSize + w * 2 + 4 + 10;
+    int height = fontSize  + 10 ;
 
     // 创建BufferedImage 对象
     BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -91,7 +109,7 @@ public class ImageTest {
     // 设置字体颜色
     graphics.setColor(Color.black);
     // 写字
-    int y = fontSize + 15;
+    int y = fontSize;
     graphics.drawString(name,w,y);
     // 释放对象
     graphics.dispose();
@@ -101,17 +119,19 @@ public class ImageTest {
 
     BufferedImage source = bufferedImage;
 
-    int borderLeft = 2;
-    int borderTop = 6;
+    int borderLeft = 1;
+    int borderTop = 3;
 
-    int borderedImageWidth = width + (borderLeft * 2);
-    int borderedImageHeight = height + (borderTop * 2);
+    int borderedImageWidth = width + borderLeft * 2;
+    int borderedImageHeight = height + borderTop * 2;
+
     BufferedImage img = new BufferedImage(borderedImageWidth, borderedImageHeight, BufferedImage.TYPE_3BYTE_BGR);
     img.createGraphics();
     Graphics2D g = (Graphics2D) img.getGraphics();
     g.setColor(Color.black);
     g.fillRect(0, 0, borderedImageWidth, borderedImageHeight);
-    g.drawImage(source, borderLeft, borderTop, width + borderLeft, height + borderTop, 0, 20, width, height, Color.YELLOW, null);
+
+    g.drawImage(source, borderLeft, borderTop , width + borderLeft , height + borderTop, 0, 0, width, height, Color.YELLOW, null);
 
     ImageIO.write(img, "png", file);
   }
