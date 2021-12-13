@@ -84,7 +84,7 @@ public class ImageTest {
   /**
    * desc.
    * <p> https://stackoverflow.com/questions/24063351/drawing-certain-parts-of-image-offset-from-the-corner
-   *
+   *  <p>关于坐标结束，查询 resources 下面的图片</p>
    * @return void
    * @author liaoyuanyuan@whyun.net.cn
    * @date 2021/12/13 18:32
