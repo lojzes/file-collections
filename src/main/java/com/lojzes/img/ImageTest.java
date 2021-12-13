@@ -81,6 +81,14 @@ public class ImageTest {
     ImageIO.write(bufferedImage, "png", new File("d:\\test.png"));
   }
 
+  /**
+   * desc.
+   * <p> https://stackoverflow.com/questions/24063351/drawing-certain-parts-of-image-offset-from-the-corner
+   *
+   * @return void
+   * @author liaoyuanyuan@whyun.net.cn
+   * @date 2021/12/13 18:32
+   **/
   public static void d3(int fontSize, String name) throws IOException {
     // 字体长度
     int nameCharSize = name.toCharArray().length;
