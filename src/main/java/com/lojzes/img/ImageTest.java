@@ -133,7 +133,7 @@ public class ImageTest {
     graphics.dispose();
 
     File file = new File("d:\\test.png");
-    ImageIO.write(bufferedImage, "png", new File("d:\\test.png"));
+    ImageIO.write(bufferedImage, "png",file);
 
     BufferedImage source = bufferedImage;
 
