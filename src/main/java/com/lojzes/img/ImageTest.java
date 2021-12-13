@@ -151,7 +151,7 @@ public class ImageTest {
     g.fillRect(0, 0, borderedImageWidth, borderedImageHeight);
 
     g.drawImage(source, borderLeft, borderTop, width + borderLeft, height + borderTop, 0, 0, width,
-        height, Color.YELLOW, null);
+        height, Color.BLACK, null);
 
     ImageIO.write(img, "png", file);
   }
