@@ -21,10 +21,10 @@ import javax.imageio.stream.FileImageOutputStream;
 public class ImageTest {
 
   public static void main(String[] args) throws IOException {
-   // d1(30);
+    // d1(30);
     // d2();
     // d3(30,"爱新觉罗张三丰");
-    d3(300, "马伟杰");
+    d3(300, "楚崇");
 
 //    int fontSize = 30;
 //    int width = fontSize * 3 + 4;
@@ -84,7 +84,8 @@ public class ImageTest {
   /**
    * desc.
    * <p> https://stackoverflow.com/questions/24063351/drawing-certain-parts-of-image-offset-from-the-corner
-   *  <p>关于坐标解释，查询 resources 下面的图片</p>
+   * <p>关于坐标解释，查询 resources 下面的图片</p>
+   *
    * @return void
    * @author liaoyuanyuan@whyun.net.cn
    * @date 2021/12/13 18:32
@@ -97,7 +98,9 @@ public class ImageTest {
     int w = 3;
     // 适应字体右边的距离
     int plus = 63;
-    if (nameCharSize == 4) {
+    if (nameCharSize == 2) {
+      plus = 50;
+    } else if (nameCharSize == 4) {
       plus = 70;
     } else if (nameCharSize == 5) {
       plus = 90;
@@ -128,12 +131,12 @@ public class ImageTest {
     graphics.setColor(Color.black);
     // 写字
     int y = fontSize;
-    graphics.drawString(name, w, y-25);
+    graphics.drawString(name, w, y - 25);
     // 释放对象
     graphics.dispose();
 
     File file = new File("d:\\test.png");
-  //  ImageIO.write(bufferedImage, "png",file);
+    //  ImageIO.write(bufferedImage, "png",file);
 
     BufferedImage source = bufferedImage;
 
