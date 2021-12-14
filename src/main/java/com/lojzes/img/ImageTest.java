@@ -21,10 +21,10 @@ import javax.imageio.stream.FileImageOutputStream;
 public class ImageTest {
 
   public static void main(String[] args) throws IOException {
-    //d1(30);
+   // d1(30);
     // d2();
     // d3(30,"爱新觉罗张三丰");
-    d3(30, "李天琦");
+    d3(300, "马伟杰");
 
 //    int fontSize = 30;
 //    int width = fontSize * 3 + 4;
@@ -45,12 +45,12 @@ public class ImageTest {
   }
 
   public static void d2() throws IOException {
-    Font font = new Font("楷体", Font.BOLD, 100);
+    Font font = new Font("宋体", Font.BOLD, 30);
     Color bg = Color.white;
     Color ft = Color.BLACK;
     FileImageOutputStream fileImageOutputStream = new FileImageOutputStream(
         new File("d:\\test.png"));
-    ImgUtil.createImage("廖远远", font, bg, ft, fileImageOutputStream);
+    ImgUtil.createImage("李天奇", font, bg, ft, fileImageOutputStream);
   }
 
 
@@ -96,23 +96,23 @@ public class ImageTest {
     // 字体左右 距画板的距离
     int w = 3;
     // 适应字体右边的距离
-    int plus = 8;
+    int plus = 63;
     if (nameCharSize == 4) {
-      plus = 10;
+      plus = 70;
     } else if (nameCharSize == 5) {
-      plus = 13;
+      plus = 90;
     } else if (nameCharSize == 6) {
-      plus = 15;
+      plus = 100;
     } else if (nameCharSize == 7) {
-      plus = 16;
+      plus = 115;
     } else if (nameCharSize == 8) {
-      plus = 19;
+      plus = 160;
     } else if (nameCharSize == 9) {
-      plus = 20;
+      plus = 163;
     }
 
     int width = fontSize * nameCharSize + w * 2 + plus;
-    int height = fontSize + 10;
+    int height = fontSize + 30;
     // 创建BufferedImage 对象
     BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     // 获取画笔
@@ -128,7 +128,7 @@ public class ImageTest {
     graphics.setColor(Color.black);
     // 写字
     int y = fontSize;
-    graphics.drawString(name, w, y);
+    graphics.drawString(name, w, y-25);
     // 释放对象
     graphics.dispose();
 
@@ -137,8 +137,8 @@ public class ImageTest {
 
     BufferedImage source = bufferedImage;
 
-    int borderLeft = 1;
-    int borderTop = 3;
+    int borderLeft = 8;
+    int borderTop = 14;
 
     int borderedImageWidth = width + borderLeft * 2;
     int borderedImageHeight = height + borderTop * 2;
