@@ -37,7 +37,7 @@ public class SealSample {
   public static void OfficialSeal_2() throws Exception {
     Seal.builder().size(300)
         .borderCircle(SealCircle.builder().line(5).width(140).height(140).build()).mainFont(
-            SealFont.builder().text("46010600010791中国四大天王股份有限公司").size(35).space(35.0).margin(10)
+            SealFont.builder().text("中国四大天王股份有限公司").size(35).space(35.0).margin(10)
                 .build()).centerFont(SealFont.builder().text("★").size(100).build())
         .titleFont(SealFont.builder().text("电子签章").size(22).space(10.0).margin(68).build()).build()
         .draw("D:/公章2.png");
