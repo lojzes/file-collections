@@ -24,7 +24,7 @@ public class ImageTest {
     // d1(30);
     // d2();
     // d3(30,"爱新觉罗张三丰");
-    d3(300, "楚崇");
+    d3(300, "李天奇");
 
 //    int fontSize = 30;
 //    int width = fontSize * 3 + 4;
@@ -141,7 +141,7 @@ public class ImageTest {
     BufferedImage source = bufferedImage;
 
     int borderLeft = 8;
-    int borderTop = 14;
+    int borderTop = 20;
 
     int borderedImageWidth = width + borderLeft * 2;
     int borderedImageHeight = height + borderTop * 2;
