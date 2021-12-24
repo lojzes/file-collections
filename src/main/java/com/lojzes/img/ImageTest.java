@@ -1,12 +1,12 @@
 package com.lojzes.img;
 
 import cn.hutool.core.img.ImgUtil;
+import com.lojzes.SignatureImgUtil;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.FileImageOutputStream;
@@ -24,7 +24,9 @@ public class ImageTest {
     // d1(30);
     // d2();
     // d3(30,"爱新觉罗张三丰");
-    d3(300, "李天奇");
+   // d3(300, "任庆军");
+
+    SignatureImgUtil.genImg("任庆军","d:\\test.png");
 
 //    int fontSize = 30;
 //    int width = fontSize * 3 + 4;
@@ -158,4 +160,5 @@ public class ImageTest {
 
     ImageIO.write(img, "png", file);
   }
+
 }
